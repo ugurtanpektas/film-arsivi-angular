@@ -12,4 +12,4 @@ Angular-cli kurulumu için node.js kurduktan sonra `npm install -g @angular/cli`
 
 ## Test İçin Yapılması Gerekenler
 
-Proje dosyalarını bilgisayarınıza indirdikten sonra projenin bulunduğu dizinde `ng serve` komutunu çalıştırmalısınız. 
+Proje dosyalarını bilgisayarınıza indirdikten sonra projenin bulunduğu dizinde ilk olarak `npm install` komutunu çalıştırarak gerekli node paketlerinin yüklenmesini sağlayın. Daha sonra `ng serve` komutunu çalıştırıp projeye http://localhost:4200 url'inden ulaşabilirsiniz. 
