@@ -13,6 +13,8 @@ export class VizyondakiFilmlerComponent implements OnInit{
   ){}
   vizyondakiFilmler;
   ngOnInit(){
-    console.log('vizyondaki filmler');
+    this.movie.getNowPlayingMovies().then((result) => {
+      this.vizyondakiFilmler = result.results;
+    });
   }
 }

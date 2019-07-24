@@ -13,6 +13,8 @@ export class YakinZamandaVizyondaComponent implements OnInit{
   ){}
   yakinZamandakiFilmler;
   ngOnInit(){
-    console.log('yakın zamanda vizyonda olacaklar');
+    this.movie.getUpcomingMovies().then((result) => {
+      this.yakinZamandakiFilmler = result.results;
+    });
   }
 }

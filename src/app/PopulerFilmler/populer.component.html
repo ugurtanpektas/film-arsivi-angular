@@ -15,14 +15,16 @@
         <h2>Popüler Filmler</h2>
     </div>
     <ng-container *ngIf="popularMovies">
-        <div class="col-md-3 mb-3" *ngFor="let movie of popularMovies">
-        <div class="card">
-            <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
-            <div class="card-body">
-                <h5 class="card-title">{{movie.title}}</h5>
-                <p class="card-text">{{movie.release_date}}</p>
+        <ng-container *ngFor="let movie of popularMovies">
+            <div class="col-md-3 mb-3" *ngIf="movie.backdrop_path">
+            <div class="card">
+                <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}" alt="{{movie.title}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{movie.title}}</h5>
+                    <p class="release-date">Yayınlanma Tarihi : {{movie.release_date | date: 'dd/MM/yyyy'}}</p>
+                </div>
+                </div>
             </div>
-            </div>
-        </div>
+        </ng-container>
     </ng-container>
 </div>

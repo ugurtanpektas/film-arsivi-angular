@@ -1,3 +1,4 @@
+import {Router, ActivatedRoute, Params} from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from './../Services/movieService.component';
 
@@ -8,10 +9,17 @@ import { MovieService } from './../Services/movieService.component';
 })
 export class FilmAraComponent implements OnInit{
   constructor(
-    private movie:MovieService
+    private movie:MovieService,
+    private activatedRoute: ActivatedRoute
   ){}
   aramaSonuclari;
+  movieName;
   ngOnInit(){
-    console.log('arama');
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.movieName = params['search'];
+      this.movie.searchMovie(this.movieName).then((result) => {
+        this.aramaSonuclari = result.results;
+      });
+    });
   }
 }

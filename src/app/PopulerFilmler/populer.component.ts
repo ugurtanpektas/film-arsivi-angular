@@ -14,7 +14,6 @@ export class PopulerComponent implements OnInit{
   popularMovies;
   ngOnInit(){
     this.movie.getPopularMovies().then((result) => {
-      console.log(result);
       this.popularMovies = result.results;
     });
   }

@@ -8,6 +8,7 @@ import { VizyondakiFilmlerComponent } from './VizyondakiFilmler/vizyondakiFilmle
 import { YakinZamandaVizyondaComponent } from './YakinZamandaVizyonda/yakinZamandaVizyonda.component';
 import { FilmDetayComponent } from './FilmDetay/filmDetay.component';
 import { FilmAraComponent } from './FilmAra/filmAra.component';
+import { SayfaBulunamadiComponent } from './SayfaBulunamadi/sayfaBulunamadi.component';
 
 const appRoutes: Routes = [
   { path: '', component: PopulerComponent },
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
   { path: 'yakin-zamanda-vizyonda', component: YakinZamandaVizyondaComponent },
   { path: 'film/:id', component: FilmDetayComponent },
   { path: 'ara', component: FilmAraComponent },
+  { path: '**', component: SayfaBulunamadiComponent },
 ];
 
 @NgModule({
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
     VizyondakiFilmlerComponent,
     YakinZamandaVizyondaComponent,
     FilmDetayComponent,
-    FilmAraComponent
+    FilmAraComponent,
+    SayfaBulunamadiComponent
   ],
   imports: [
     BrowserModule,
