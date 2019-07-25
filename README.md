@@ -1,7 +1,3 @@
-# Demo
-
-https://ugurtanpektas.github.io/filmio-angular/
-
 # Angular Film Arama&Listeleme Projesi
 
 The Movie Database API (https://www.themoviedb.org) kullanılarak angular ile geliştirilmiş film arama ve listeleme projesi.
