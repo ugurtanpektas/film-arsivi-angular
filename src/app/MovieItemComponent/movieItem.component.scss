@@ -1,0 +1,10 @@
+.card{
+    a{
+        color:#333;
+        text-decoration: none;
+        &:hover{
+            color: #000;
+            text-decoration: none;
+        }
+    }
+}

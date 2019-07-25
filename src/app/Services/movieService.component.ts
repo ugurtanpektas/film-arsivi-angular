@@ -15,7 +15,12 @@ export class MovieService {
   getNowPlayingMovies (activePage): Promise<any> {
     return this.http.get(url_base + 'movie/now_playing?api_key='+api_key+'&language=tr-TR&page='+activePage+'&include_adult=false').toPromise();
   }
-
+  getMovieDetail (movieId): Promise<any> {
+    return this.http.get(url_base + 'movie/'+movieId+'?api_key='+api_key+'&language=tr-TR').toPromise();
+  }
+  getMovieCredits (movieId): Promise<any> {
+    return this.http.get(url_base + 'movie/'+movieId+'/credits?api_key='+api_key).toPromise();
+  }
   searchMovie (movieName, activePage): Promise<any> {
     return this.http.get(url_base + 'search/movie?api_key='+api_key+'&language=tr-TR&query='+movieName+'&page='+activePage+'&include_adult=false').toPromise();
   }

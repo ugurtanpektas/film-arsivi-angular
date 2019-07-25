@@ -1,13 +1,13 @@
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" routerLink="/" routerLinkActive="active"><img src="./../assets/images/filmio-logo.png" width="25"/> Filmio</a>
+        <a class="navbar-brand" routerLink="/anasayfa" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><img src="./../assets/images/filmio-logo.png" width="25"/> Filmio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" routerLink="/" routerLinkActive="active">Anasayfa <span class="sr-only">(current)</span></a>
+              <a class="nav-link" routerLink="/anasayfa" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Anasayfa <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" routerLink="/vizyondaki-filmler" routerLinkActive="active">Vizyondaki Filmler</a>

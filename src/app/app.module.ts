@@ -10,9 +10,11 @@ import { MovieDetailComponent } from './MovieDetail/movieDetail.component';
 import { SearchMovieComponent } from './SearchMovie/searchMovie.component';
 import { PageNotFoundComponent } from './PageNotFound/pageNotFound.component';
 import { PaginationComponent } from './PaginationComponent/pagination.component';
+import { MovieItemComponent } from './MovieItemComponent/movieItem.component';
 
 const appRoutes: Routes = [
-  { path: '', component: PopularMoviesComponent },
+  { path: '', redirectTo:'anasayfa', pathMatch:'full'},
+  { path: 'anasayfa', component: PopularMoviesComponent },
   { path: 'vizyondaki-filmler', component: NowPlayingMoviesComponent },
   { path: 'yakin-zamanda-vizyonda', component: UpcomingMoviesComponent },
   { path: 'film/:id', component: MovieDetailComponent },
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
     MovieDetailComponent,
     SearchMovieComponent,
     PageNotFoundComponent,
-    PaginationComponent
+    PaginationComponent,
+    MovieItemComponent
   ],
   imports: [
     BrowserModule,

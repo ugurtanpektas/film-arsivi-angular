@@ -4,15 +4,7 @@
         <h2>Vizyondaki Filmler</h2>
     </div>
         <ng-container *ngFor="let movie of nowPlayingMovies">
-            <div class="col-md-3 mb-3" *ngIf="movie.backdrop_path">
-            <div class="card">
-                <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}" alt="{{movie.title}}">
-                <div class="card-body">
-                    <h5 class="card-title">{{movie.title}}</h5>
-                    <p class="release-date">Yayınlanma Tarihi : {{movie.release_date | date: 'dd/MM/yyyy'}}</p>
-                </div>
-                </div>
-            </div>
+            <app-movie-item [movie]="movie" class="col-md-3 mb-3" *ngIf="movie.backdrop_path"></app-movie-item>
         </ng-container>
 </div>
 <app-pagination [activePage]="activePage" [totalPage]="totalPage" [urlBase]="'/vizyondaki-filmler'"></app-pagination>
