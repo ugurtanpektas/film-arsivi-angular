@@ -9,6 +9,7 @@ import { UpcomingMoviesComponent } from './UpcomingMovies/upcomingMovies.compone
 import { MovieDetailComponent } from './MovieDetail/movieDetail.component';
 import { SearchMovieComponent } from './SearchMovie/searchMovie.component';
 import { PageNotFoundComponent } from './PageNotFound/pageNotFound.component';
+import { PaginationComponent } from './PaginationComponent/pagination.component';
 
 const appRoutes: Routes = [
   { path: '', component: PopularMoviesComponent },
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     UpcomingMoviesComponent,
     MovieDetailComponent,
     SearchMovieComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../Services/movieService.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-populer-filmler',
@@ -9,12 +10,19 @@ import { MovieService } from '../Services/movieService.component';
 })
 export class PopularMoviesComponent implements OnInit{
   constructor(
-    private movie:MovieService
+    private movie:MovieService,
+    private activatedRoute: ActivatedRoute
   ){}
   popularMovies;
+  totalPage = 1;
+  activePage = 1;
+  pages = [];
   ngOnInit(){
-    this.movie.getPopularMovies().then((result) => {
-      this.popularMovies = result.results;
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.activePage = params['page'];
+      this.movie.getPopularMovies(this.activePage).then((result) => {
+        this.popularMovies = result.results;
+      });
     });
   }
 }
