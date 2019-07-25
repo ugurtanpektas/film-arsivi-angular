@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from './../Services/movieService.component';
+import { MovieService } from '../Services/movieService.component';
 
 @Component({
-  selector: 'app-film-detay',
-  templateUrl: './filmDetay.component.html',
+  selector: 'app-movie-detail',
+  templateUrl: './movieDetail.component.html',
   providers:[MovieService]
 })
-export class FilmDetayComponent implements OnInit{
+export class MovieDetailComponent implements OnInit{
   constructor(
     private movie:MovieService
   ){}

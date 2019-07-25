@@ -3,31 +3,31 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-import { PopulerComponent } from './PopulerFilmler/populer.component';
-import { VizyondakiFilmlerComponent } from './VizyondakiFilmler/vizyondakiFilmler.component';
-import { YakinZamandaVizyondaComponent } from './YakinZamandaVizyonda/yakinZamandaVizyonda.component';
-import { FilmDetayComponent } from './FilmDetay/filmDetay.component';
-import { FilmAraComponent } from './FilmAra/filmAra.component';
-import { SayfaBulunamadiComponent } from './SayfaBulunamadi/sayfaBulunamadi.component';
+import { PopularMoviesComponent } from './PopularMovies/popularMovies.component';
+import { NowPlayingMoviesComponent } from './NowPlayingMovies/nowPlayingMovies.component';
+import { UpcomingMoviesComponent } from './UpcomingMovies/upcomingMovies.component';
+import { MovieDetailComponent } from './MovieDetail/movieDetail.component';
+import { SearchMovieComponent } from './SearchMovie/searchMovie.component';
+import { PageNotFoundComponent } from './PageNotFound/pageNotFound.component';
 
 const appRoutes: Routes = [
-  { path: '', component: PopulerComponent },
-  { path: 'vizyondaki-filmler', component: VizyondakiFilmlerComponent },
-  { path: 'yakin-zamanda-vizyonda', component: YakinZamandaVizyondaComponent },
-  { path: 'film/:id', component: FilmDetayComponent },
-  { path: 'ara', component: FilmAraComponent },
-  { path: '**', component: SayfaBulunamadiComponent },
+  { path: '', component: PopularMoviesComponent },
+  { path: 'vizyondaki-filmler', component: NowPlayingMoviesComponent },
+  { path: 'yakin-zamanda-vizyonda', component: UpcomingMoviesComponent },
+  { path: 'film/:id', component: MovieDetailComponent },
+  { path: 'ara', component: SearchMovieComponent },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    PopulerComponent,
-    VizyondakiFilmlerComponent,
-    YakinZamandaVizyondaComponent,
-    FilmDetayComponent,
-    FilmAraComponent,
-    SayfaBulunamadiComponent
+    PopularMoviesComponent,
+    NowPlayingMoviesComponent,
+    UpcomingMoviesComponent,
+    MovieDetailComponent,
+    SearchMovieComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

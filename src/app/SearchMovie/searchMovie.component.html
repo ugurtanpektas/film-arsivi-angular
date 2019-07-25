@@ -2,8 +2,8 @@
         <div class="col-md-12 mt-3 mb-3">
             <h2>"{{movieName}}" için arama sonuçları</h2>
         </div>
-        <ng-container *ngIf="aramaSonuclari">
-            <ng-container *ngFor="let movie of aramaSonuclari">
+        <ng-container *ngIf="searchResults">
+            <ng-container *ngFor="let movie of searchResults">
                 <div class="col-md-3 mb-3" *ngIf="movie.backdrop_path">
                     <div class="card">
                         <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}" alt="{{movie.title}}">

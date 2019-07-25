@@ -1,18 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FilmDetayComponent } from './filmDetay.component';
-import { MovieService } from './../Services/movieService.component';
+import { PopularMoviesComponent } from './popularMovies.component';
+import { MovieService } from '../Services/movieService.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    FilmDetayComponent
+    PopularMoviesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
   providers: [MovieService],
-  bootstrap: [FilmDetayComponent]
+  bootstrap: [PopularMoviesComponent]
 })
-export class PopulerModule { }
+export class PopularMoviesModule { }

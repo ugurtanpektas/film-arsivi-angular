@@ -1,18 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FilmAraComponent } from './filmAra.component';
-import { MovieService } from './../Services/movieService.component';
+import { MovieDetailComponent } from './movieDetail.component';
+import { MovieService } from '../Services/movieService.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    FilmAraComponent
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
   providers: [MovieService],
-  bootstrap: [FilmAraComponent]
+  bootstrap: [MovieDetailComponent]
 })
-export class FilmAraModule { }
+export class MovieDetailModule { }

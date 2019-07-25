@@ -1,18 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { PopulerComponent } from './populer.component';
-import { MovieService } from './../Services/movieService.component';
+import { PageNotFoundComponent } from './pageNotFound.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    PopulerComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
-  providers: [MovieService],
-  bootstrap: [PopulerComponent]
+  providers: [],
+  bootstrap: [PageNotFoundComponent]
 })
-export class PopulerModule { }
+export class PageNotFoundModule { }

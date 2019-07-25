@@ -1,18 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { YakinZamandaVizyondaComponent } from './yakinZamandaVizyonda.component';
-import { MovieService } from './../Services/movieService.component';
+import { NowPlayingMoviesComponent } from './nowPlayingMovies.component';
+import { MovieService } from '../Services/movieService.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    YakinZamandaVizyondaComponent
+    NowPlayingMoviesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
   providers: [MovieService],
-  bootstrap: [YakinZamandaVizyondaComponent]
+  bootstrap: [NowPlayingMoviesComponent]
 })
-export class YakinZamandaVizyondaModule { }
+export class NowPlayingModule { }

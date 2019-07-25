@@ -2,8 +2,8 @@
     <div class="col-md-12 mt-3 mb-3">
         <h2>Vizyondaki Filmler</h2>
     </div>
-    <ng-container *ngIf="vizyondakiFilmler">
-        <ng-container *ngFor="let movie of vizyondakiFilmler">
+    <ng-container *ngIf="nowPlayingMovies">
+        <ng-container *ngFor="let movie of nowPlayingMovies">
             <div class="col-md-3 mb-3" *ngIf="movie.backdrop_path">
             <div class="card">
                 <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}" alt="{{movie.title}}">

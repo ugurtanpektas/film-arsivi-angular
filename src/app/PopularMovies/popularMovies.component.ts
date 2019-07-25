@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from './../Services/movieService.component';
+import { MovieService } from '../Services/movieService.component';
 
 @Component({
   selector: 'app-populer-filmler',
-  templateUrl: './populer.component.html',
+  templateUrl: './popularMovies.component.html',
   providers:[MovieService]
-  // styleUrls: ['./populer.component.scss']
+  // styleUrls: ['./popularMovies.component.scss']
 })
-export class PopulerComponent implements OnInit{
+export class PopularMoviesComponent implements OnInit{
   constructor(
     private movie:MovieService
   ){}
