@@ -3,9 +3,17 @@
 <head>
   <meta charset="utf-8">
   <title>Filmio - Güncel Filmler</title>
-  <base href="https://ugurtanpektas.github.io/filmio-angular/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="https://ugurtanpektas.github.io/filmio-angular/">  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    (function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
 <link rel="stylesheet" href="styles.33a778b72bfc0f36c448.css"></head>
 <body>
   <app-root></app-root>
