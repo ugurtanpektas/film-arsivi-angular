@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { MovieItemComponent } from './movieItem.component';
 
 @NgModule({
-  declarations: [MovieItemComponent],
+  declarations: [],
   imports: [],
   providers: [],
   bootstrap: [MovieItemComponent]

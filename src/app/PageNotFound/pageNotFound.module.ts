@@ -4,9 +4,7 @@ import { PageNotFoundComponent } from './pageNotFound.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    PageNotFoundComponent
-  ],
+  declarations: [],
   imports: [
     BrowserModule,
     HttpClientModule

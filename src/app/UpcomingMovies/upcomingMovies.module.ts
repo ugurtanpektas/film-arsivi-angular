@@ -5,9 +5,7 @@ import { MovieService } from '../Services/movieService.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    UpcomingMoviesComponent
-  ],
+  declarations: [],
   imports: [
     BrowserModule,
     HttpClientModule
