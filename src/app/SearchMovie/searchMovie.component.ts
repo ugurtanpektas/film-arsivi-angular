@@ -14,11 +14,15 @@ export class SearchMovieComponent implements OnInit{
   ){}
   searchResults;
   movieName;
+  totalPage = 1;
+  activePage = 1;
   ngOnInit(){
     this.activatedRoute.queryParams.subscribe(params => {
-      this.movieName = params['search'];
-      this.movie.searchMovie(this.movieName).then((result) => {
+      this.movieName = params['s'];
+      this.activePage = params['page'] ? params['page'] : 1;
+      this.movie.searchMovie(this.movieName, this.activePage).then((result) => {
         this.searchResults = result.results;
+        this.totalPage = result.total_pages;
       });
     });
   }

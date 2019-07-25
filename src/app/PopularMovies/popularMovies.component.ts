@@ -16,12 +16,12 @@ export class PopularMoviesComponent implements OnInit{
   popularMovies;
   totalPage = 1;
   activePage = 1;
-  pages = [];
   ngOnInit(){
     this.activatedRoute.queryParams.subscribe(params => {
-      this.activePage = params['page'];
+      this.activePage = params['page'] ? params['page'] : 1;
       this.movie.getPopularMovies(this.activePage).then((result) => {
         this.popularMovies = result.results;
+        this.totalPage = result.total_pages;
       });
     });
   }

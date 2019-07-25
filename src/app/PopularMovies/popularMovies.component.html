@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <form method="GET" action="/ara">
             <div class="input-group mb-3 mt-5">
-                <input type="text" class="form-control" name="search" placeholder="Aramak istediğiniz filmin ismini giriniz"/>
+                <input type="text" class="form-control" name="s" placeholder="Aramak istediğiniz filmin ismini giriniz"/>
                 <div class="input-group-append">
                     <button type="submit" class="btn btn-primary">Ara</button>
                 </div>
@@ -10,22 +10,22 @@
         </form>
     </div>
 </div>
-<div class="row">
-    <div class="col-md-12 mt-3 mb-3">
-        <h2>Popüler Filmler</h2>
+<ng-container *ngIf="popularMovies">
+    <div class="row">
+        <div class="col-md-12 mt-3 mb-3">
+            <h2>Popüler Filmler</h2>
+        </div>
+            <ng-container *ngFor="let movie of popularMovies">
+                <div class="col-md-3 mb-3" *ngIf="movie.backdrop_path">
+                <div class="card">
+                    <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}" alt="{{movie.title}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{movie.title}}</h5>
+                        <p class="release-date">Yayınlanma Tarihi : {{movie.release_date | date: 'dd/MM/yyyy'}}</p>
+                    </div>
+                    </div>
+                </div>
+            </ng-container>
     </div>
-    <ng-container *ngIf="popularMovies">
-        <ng-container *ngFor="let movie of popularMovies">
-            <div class="col-md-3 mb-3" *ngIf="movie.backdrop_path">
-            <div class="card">
-                <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}" alt="{{movie.title}}">
-                <div class="card-body">
-                    <h5 class="card-title">{{movie.title}}</h5>
-                    <p class="release-date">Yayınlanma Tarihi : {{movie.release_date | date: 'dd/MM/yyyy'}}</p>
-                </div>
-                </div>
-            </div>
-        </ng-container>
-    </ng-container>
-</div>
-<app-pagination></app-pagination>
+    <app-pagination [activePage]="activePage" [totalPage]="totalPage" ></app-pagination>
+</ng-container>
