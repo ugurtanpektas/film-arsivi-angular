@@ -1,15 +1,15 @@
-# Angular Film Arama&Listeleme Projesi
+# Angular Movie Search & Listing Project
 
-The Movie Database API (https://www.themoviedb.org) kullanılarak angular ile geliştirilmiş film arama ve listeleme projesi.
+A movie search and listing project developed with angular using The Movie Database API (https://www.themoviedb.org).
 
-## Ön Gereksinimler
+## Prerequisites
 
-Bu projeyi bilgisayarınızda deneyebilmek için bilgisayarınızda node.js ve angular-cli kurulu olması gereklidir.
+In order to try this project on your computer, you must have node.js and angular-cli installed on your computer.
 
-Node.js Kurulumunu https://nodejs.org/en/ linki üzerinden yapabilirsiniz.
+You can install Node.js via the link https://nodejs.org/en/.
 
-Angular-cli kurulumu için node.js kurduktan sonra `npm install -g @angular/cli` komutunu terminalden çalıştırabilirsiniz.
+For angular-cli installation, after installing node.js, you can run the command `npm install -g @ angular / cli` from the terminal.
 
-## Test İçin Yapılması Gerekenler
+## What To Do For The Test
 
-Proje dosyalarını bilgisayarınıza indirdikten sonra projenin bulunduğu dizinde ilk olarak `npm install` komutunu çalıştırarak gerekli node paketlerinin yüklenmesini sağlayın. Daha sonra `ng serve` komutunu çalıştırıp projeye http://localhost:4200 url'inden ulaşabilirsiniz. 
+After downloading the project files to your computer, first run the "npm install" command in the directory where the project is located and ensure that the necessary node packages are installed. You can then run the `ng serve` command and access the project at http://localhost:4200
